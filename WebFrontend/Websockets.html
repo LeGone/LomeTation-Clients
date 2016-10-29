@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <script type="text/javascript">
+         function Test()
+         {
+            if ("WebSocket" in window)
+            {
+               // Let us open a web socket
+               var ws = new WebSocket("ws://bypass.legone.name:8081");
+				
+               ws.onopen = function()
+               {
+                  // Web Socket is connected, send data using send()
+                  ws.send('{"Method":"SetRelayPosition", "Pin":"0", "Position":"0"}');
+				  ws.close();
+               };
+            }
+         }
+		 
+         function Test2()
+         {
+			var xhr = new XMLHttpRequest();
+			xhr.open('PUT', 'http://bypass.legone.name:8080');
+			xhr.setRequestHeader('Content-Type', 'application/json');
+			xhr.onload = function() {
+				if (xhr.status === 200) {
+					var userInfo = JSON.parse(xhr.responseText);
+				}
+			};
+			//xhr.send('{"Wohnzimmer":{"Schalten":{"Schrankbeleuchtung":0,"relay2":0,"relay3":0,"relay4":0,"relay5":0,"relay6":0,"relay7":0,"relay8":0},"Beleuchtung":{"Schrank":{"1":0,"2":0,"3":0}}},"Unspezifisch":{"System":{"Iterationen":500000}}}');
+			xhr.send('{"Wohnzimmer":{"Schalten":{"Schrankbeleuchtung":1}}}');
+		}
+		 
+         function Test3()
+         {
+			var xhr = new XMLHttpRequest();
+			xhr.open('PUT', 'http://bypass.legone.name:8080');
+			xhr.setRequestHeader('Content-Type', 'application/json');
+			xhr.onload = function() {
+				if (xhr.status === 200) {
+					var userInfo = JSON.parse(xhr.responseText);
+				}
+			};
+			//xhr.send('{"Wohnzimmer":{"Schalten":{"Schrankbeleuchtung":0,"relay2":0,"relay3":0,"relay4":0,"relay5":0,"relay6":0,"relay7":0,"relay8":0},"Beleuchtung":{"Schrank":{"1":0,"2":0,"3":0}}},"Unspezifisch":{"System":{"Iterationen":500000}}}');
+			xhr.send('[["wohnzimmer"],["relais",["relay1":0]]]');
+         }
+      </script>
+   </head>
+	
+   <body>
+      <div id="sse">
+         <a href="javascript:Test()">Test</a>
+         <a href="javascript:Test2()">Test2</a>
+         <a href="javascript:Test3()">Test3</a>
+      </div>
+   </body>
+</html>

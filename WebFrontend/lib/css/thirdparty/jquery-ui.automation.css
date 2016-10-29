@@ -1,0 +1,34 @@
+.sliderSpeed, .sliderMaster, .sliderRed, .sliderGreen, .sliderBlue, .sliderWhite
+{
+	display: inline-block;
+    clear: left;
+    margin: 15px;
+	height: 150px;
+}
+
+.optionFunction, .optionColor
+{
+    margin: 3px;
+	display: block;
+    width: 98%;
+}
+
+.swatch
+{
+	display: inline-block;
+    margin: 15px;
+    width: 120px;
+    height: 150px;
+    background-image: none;
+}
+
+.sliderMaster .ui-slider-range { background: #cccccc; }
+.sliderMaster .ui-slider-handle { border-color: #cccccc; }
+.sliderRed .ui-slider-range { background: #ef2929; }
+.sliderRed .ui-slider-handle { border-color: #ef2929; }
+.sliderGreen .ui-slider-range { background: #8ae234; }
+.sliderGreen .ui-slider-handle { border-color: #8ae234; }
+.sliderBlue .ui-slider-range { background: #729fcf; }
+.sliderBlue .ui-slider-handle { border-color: #729fcf; }
+.sliderWhite .ui-slider-range { background: #ffffff; }
+.sliderWhite .ui-slider-handle { border-color: #ffffff; }

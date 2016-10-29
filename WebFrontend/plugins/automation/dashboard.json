@@ -1,0 +1,225 @@
+{
+	"version": 1,
+	"allow_edit": true,
+	"plugins": [],
+	"panes": [
+		{
+			"width": 1,
+			"row": {
+				"3": 1,
+				"4": 1
+			},
+			"col": {
+				"3": 2,
+				"4": 3
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "relay",
+					"settings": {
+						"title": "Schrankbeleuchtung",
+						"value": "datasources[\"Raffaelus Käfer\"][\"Wohnzimmer\"][\"Schalten\"][\"Schrankbeleuchtung\"]",
+						"target": "ws://legone.xlnt.cc:8081"
+					}
+				},
+				{
+					"type": "relay",
+					"settings": {
+						"title": "Relay 2",
+						"value": "datasources[\"Raffaelus Käfer\"][\"Wohnzimmer\"][\"Schalten\"][\"relay2\"]",
+						"target": "ws://legone.xlnt.cc:8081"
+					}
+				},
+				{
+					"type": "relay",
+					"settings": {
+						"title": "Relay 3",
+						"value": "datasources[\"Raffaelus Käfer\"][\"Wohnzimmer\"][\"Schalten\"][\"relay3\"]"
+					}
+				},
+				{
+					"type": "relay",
+					"settings": {
+						"title": "Relay 4",
+						"value": "datasources[\"Raffaelus Käfer\"][\"Wohnzimmer\"][\"Schalten\"][\"relay4\"]"
+					}
+				},
+				{
+					"type": "relay",
+					"settings": {
+						"title": "Relay 5",
+						"value": "datasources[\"Raffaelus Käfer\"][\"Wohnzimmer\"][\"Schalten\"][\"relay5\"]"
+					}
+				},
+				{
+					"type": "relay",
+					"settings": {
+						"title": "Relay 6",
+						"value": "datasources[\"Raffaelus Käfer\"][\"Wohnzimmer\"][\"Schalten\"][\"relay6\"]"
+					}
+				},
+				{
+					"type": "relay",
+					"settings": {
+						"title": "Relay 7",
+						"value": "datasources[\"Raffaelus Käfer\"][\"Wohnzimmer\"][\"Schalten\"][\"relay7\"]"
+					}
+				},
+				{
+					"type": "relay",
+					"settings": {
+						"title": "Relay 8",
+						"value": "datasources[\"Raffaelus Käfer\"][\"Wohnzimmer\"][\"Schalten\"][\"relay8\"]"
+					}
+				}
+			]
+		},
+		{
+			"title": "Temperaturen",
+			"width": 1,
+			"row": {
+				"3": 1,
+				"4": 1
+			},
+			"col": {
+				"3": 3,
+				"4": 4
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Temperatur Wohnzimmer",
+						"size": "big",
+						"value": "datasources[\"Raffaelus Käfer\"][\"Wohnzimmer\"][\"Temperaturen\"][\"Schreibtisch\"]",
+						"sparkline": true,
+						"animate": true,
+						"units": "°C"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Aussentemperatur",
+						"size": "regular",
+						"value": "datasources[\"Weather\"][\"current_temp\"]",
+						"sparkline": true,
+						"animate": true,
+						"units": "°C"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Erwartete Höchsttemperatur",
+						"size": "regular",
+						"value": "datasources[\"Weather\"][\"high_temp\"]",
+						"sparkline": true,
+						"animate": true,
+						"units": "°C"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Temperatur AVR",
+						"size": "regular",
+						"value": "datasources[\"Raffaelus Käfer\"][\"Wohnzimmer\"][\"Temperaturen\"][\"AVR-Schaltung\"]",
+						"sparkline": true,
+						"animate": true,
+						"units": "°C"
+					}
+				}
+			]
+		},
+		{
+			"title": "WohnzimmerEffektBeleuchtung",
+			"width": 1,
+			"row": {
+				"3": 1,
+				"4": 1
+			},
+			"col": {
+				"3": 1,
+				"4": 1
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "par12led_widget",
+					"settings": {
+						"title": "Strahler",
+						"LEDFunction": "datasources[\"Raffaelus Käfer\"][\"DMX\"][\"5\"]",
+						"LEDColor": "datasources[\"Raffaelus Käfer\"][\"DMX\"][\"6\"]",
+						"LEDSpeed": "datasources[\"Raffaelus Käfer\"][\"DMX\"][\"7\"]",
+						"LEDMaster": "datasources[\"Raffaelus Käfer\"][\"DMX\"][\"8\"]",
+						"LEDRed": "datasources[\"Raffaelus Käfer\"][\"DMX\"][\"9\"]",
+						"LEDGreen": "datasources[\"Raffaelus Käfer\"][\"DMX\"][\"10\"]",
+						"LEDBlue": "datasources[\"Raffaelus Käfer\"][\"DMX\"][\"11\"]",
+						"LEDWhite": "datasources[\"Raffaelus Käfer\"][\"DMX\"][\"12\"]"
+					}
+				}
+			]
+		},
+		{
+			"title": "Wohnzimmer Schrankbeleuchtung",
+			"width": 1,
+			"row": {
+				"3": 5,
+				"4": 1
+			},
+			"col": {
+				"3": 1,
+				"4": 2
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "led_widget",
+					"settings": {
+						"title": "LED-Stripes A",
+						"method": "sliders",
+						"LEDColorRed": "datasources[\"Raffaelus Käfer\"][\"DMX\"][\"2\"]",
+						"LEDColorGreen": "datasources[\"Raffaelus Käfer\"][\"DMX\"][\"1\"]",
+						"LEDColorBlue": "datasources[\"Raffaelus Käfer\"][\"DMX\"][\"3\"]"
+					}
+				},
+				{
+					"type": "led_widget",
+					"settings": {
+						"title": "LED-Stripes B",
+						"method": "sliders",
+						"LEDColorRed": "datasources[\"Raffaelus Käfer\"][\"DMX\"][\"14\"]",
+						"LEDColorGreen": "datasources[\"Raffaelus Käfer\"][\"DMX\"][\"13\"]",
+						"LEDColorBlue": "datasources[\"Raffaelus Käfer\"][\"DMX\"][\"15\"]"
+					}
+				}
+			]
+		}
+	],
+	"datasources": [
+		{
+			"name": "Raffaelus Käfer",
+			"type": "JSON",
+			"settings": {
+				"url": "http://legone.xlnt.cc:8080",
+				"use_thingproxy": true,
+				"refresh": 1,
+				"method": "GET",
+				"body": ""
+			}
+		},
+		{
+			"name": "Weather",
+			"type": "openweathermap",
+			"settings": {
+				"location": "Wallau, DE",
+				"units": "metric",
+				"refresh": 120
+			}
+		}
+	],
+	"columns": 4
+}
